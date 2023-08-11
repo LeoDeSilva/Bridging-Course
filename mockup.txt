@@ -1,0 +1,196 @@
+TODO
+====
+[ ] More indepth messages taking into account surroundings... e.g. the forrest thins out, mountains in your distant northwest
+  [ ] Look at 9 surrounding tiles and if "mountain, ocean, dungeon/ruins, path" mention "e..g ocean reaching to your south" or path continues north
+  [ ] Changing between tile types e.g. forrest thins/abruptly ends reavelling an open plain
+[ ] Restrict world e.g. forrest becomes too dense, machete to proceed further, ocean blocking your path, locked door to dungeon
+[ ] Implement a path from the beginning cabin to dungeon (perhaps obstacles along the way)
+[ ] Implement the interiors of buildings/ruins etc... 
+  [ ] Dungeon-style procedural generation
+  [ ] Localised map that must be found
+[ ] Inventory 
+  [ ] Crafting : "combine wood and string"
+[ ] Implement ruins with monsters and loot
+
+ITEMS
+=====
+Compass:
+  - locate forrest: # undefined distance just state rough location
+    - northwest
+    - south
+  - locate dungeon : #perhaps reveal path or simply location
+
+GAMEPLAY LOOP:
+start with a compass pointing towards ruins no map to determine location of dungeon thus must find ruins following compass
+ruins contain the map of the world pointing towards the dungeon 
+
+   N 
+    x
+W  x  E
+    
+   S  
+
+  N 
+W + E
+  S  
+
+COMBAT: (darkest dungeon)
+
+2 1 *   0 1 2
+A K K | B B A
+–   –   
+
+Knight: hp: 4
+skills:
+  * slash - (3,8) piercing damage + bleed
+  * smash - (5-10) blunt damage 
+  * defend - negate 50% damage
+
+What will you do?
+: slash 0
+
+Bat(0) takes 5 piercing damage, bleed status effect inflicted. Hp: 2
+_________________
+
+: recruit
+
+* 0 Theodore Lawrence : Knight 
+  * Skills:
+    * [. o o .] Slash - (3-8) slashing damage
+    * [. . o o] Stab - (3-8) stabbing damage
+    * [. . . o] Bash - (2-5) blunt damage
+  * Resistances:
+    * Piercing: 0.75
+    * Slashing : 1.5
+    * BLUNT : 2
+
+* 1 Terrance Harland : Mage 
+  * Skills:
+    [...]
+  * Resistances:
+    [...]
+
+* 2 Gerrick Stormcloak : Archer 
+  * Skills:
+    [...]
+  * Resistances:
+    [...]
+
+–-–––––––––––––––
+
+Knight(0) takes 4 blunt damage from Bat(0), HP: 1
+
+Archer(2) tales 2 piercing damage from RED: Archer(2), HP remaining: 0
+Archer(2) was killed - their corpse litters the battlefield
+
+    *   
+A K K | B B A
+2 1 0   0 1 2
+
+COMBAT: (a)
+  1 2 3 4 5 6 7 8
+ +–––––––––––––––
+1| A H A * . . . .
+2| # # # o . . . .
+3| . # K o . . . .
+4| . # o o * . . .
+5| . . . . E # . .
+6| . . . . . # . .
+7| . . . . . . . .
+8| # # # . . . . .
+
+archer: attack 4,6
+knight: attack south
+healer: move south
+
+
+PATH GENERATION
+===============
+start = x1, y1  dungeon = x2, y2
+(1,3) and (5,0)
+breadth first search:
+- create a queue and append starting cell:
+while queue 
+  - pop beginning of queue and store as current cell
+  - if current cell = goal break from loop
+  - for each neighbour 
+    - if neighbour is a valid path cell that has not been visisited (within x and y bounds, not visited, is walkable) 
+      - mark as visited
+      - append neighbour to queue 
+      - parent[new (neighbour)] = current cell  
+- traceback:
+  - path = [] current cell = goal
+  - while current cell != start:
+    - path.append current cell
+    - current_cell = parent[current cell]
+  - path.append start
+  - reverse path order
+
+  - PATH FOUND? length of path > 0
+
+0|    - - - x   
+1|    - # # #
+2|    -
+3|  x -
+4|  
+5 – – – – – – 
+  0 1 2 3 4 5
+
+MOCKUP
+======
+
+You awaken in a dense forrest littered with pinecones: a key, sachel and broken sword lie on the ground in front of you. What do you do?
+> take broken sword
+you take the broken sword
+> take key
+you take the key
+> move north
+you remain in a densely forrested region
+> take map
+you take the map
+> use map
+
+OVERWORLD
+
+.mmf.....
+.fmfl#.f.
+..llllff.
+...llccc
+...cccsss
+..ccsss..
+
+
+
+DUNGEON:
+
+  ####
+  #..#
+  #..#
+  #..##################
+  #...................#
+  #############..######
+              #..# 
+              ####
+
+
+MESSAGES
+There is a path winding through a dimly lit forrest. The path heads north-south here. One particularly large tree with some low branches stands at the end of the path.
+You are in a clearing with forrest surrounding you on all sides, a path leads south on the ground is a pile of leaves
+The forrest becomes impenetrable to the north
+There is a forrest with trees in all directions. To the east there appears to be sunlight
+Forrest path. You hear the sounds of chirping birds
+Forrest. There is a dimly lit forrest with large trees all around
+The forrest thins out rjjjoevelaling impenetrable mountains
+Forrest
+You are in a small clearing in a well marked forrest path that extends to the east and west
+
+You are at the top of the Great Canyon on its west wall. From here there is a
+marvelous view of the canyon and parts of the Frigid River upstream. Across
+the canyon, the walls of the White Cliffs join the mighty ramparts of the
+Flathead Mountains to the east. Following the Canyon upstream to the north,
+Aragain Falls may be seen, complete with rainbow. The mighty Frigid River
+Flows out from a great dark cavern. To the west and south can be seen an
+immense forest, stretching for miles around. A path leads northwest. It is
+possible to climb down into the canyon from here.
+
+clearing

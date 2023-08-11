@@ -1,0 +1,302 @@
+{
+    "land": {
+        "location_type": [
+            "plain",
+            "clearing",
+            "field",
+            "meadow",
+            "grassland",
+            "expanse",
+            "pasture"
+        ],
+
+        "adjective": [
+            "spacious",
+            "vast",
+            "comforting",
+            "serene",
+            "peaceful",
+            "endless",
+            "open",
+            "tranquil",
+            "expansive",
+            "undisturbed"
+        ],
+
+        "feature": [
+            "Sparce plants are fed on by a plethera of small insects.",
+            "A densely padded grass carpets the earth.",
+            "A gentle breeze rustles the tall grasses.",
+            "Wildflowers dot the landscape with bursts of color.",
+            "A small stream trickles through the plain.",
+            "Flocks of birds soar gracefully in the clear sky.",
+            "A herd of grazing deer catches your attention.",
+            "The scent of fresh earth fills the air.",
+            "Sunlight bathes the plain in a warm glow.",
+            "A lone oak tree stands resilient amidst the openness.",
+            "The sound of chirping crickets creates a peaceful ambiance."
+        ]
+    },
+
+    "forrest": {
+        "location_type": [
+            "forrest",
+            "woods",
+            "grove",
+            "thicket",
+            "woodland",
+            "canopy"
+        ],
+
+        "adjective": [
+            "dense",
+            "enchanting",
+            "lush",
+            "mysterious",
+            "majestic",
+            "ancient",
+            "serene",
+            "undisturbed",
+            "untamed",
+            "tranquil"
+        ],
+
+        "feature": [
+            "A particularly large tree reaches far into the forrest canopy and out of sight.",
+            "A faintly trodden path reaching through the undergrowth.",
+            "Sunlight filters through the leaves, casting dappled shadows on the ground.",
+            "The air is filled with the earthy scent of moss and the gentle rustling of leaves.",
+            "Birds chirp melodiously, their songs blending harmoniously with the whispers of the wind.",
+            "Sunlight filters through the dense foliage above.",
+            "The air is filled with the earthy scent of moss and fallen leaves.",
+            "Towering ancient trees surround you, their trunks covered in moss.",
+            "Birds chirp and flutter among the branches, creating a symphony of sounds.",
+            "A carpet of vibrant wildflowers blankets the forest floor.",
+            "Rays of sunlight break through the canopy, illuminating patches of ferns.",
+            "A hidden path meanders deeper into the heart of the forest.",
+            "Squirrels playfully chase each other from tree to tree."
+        ]
+    },
+
+    "coast": {
+        "location_type": [
+            "shore",
+            "beach",
+            "shoreline",
+            "coast",
+            "seashore",
+            "dune",
+            "bay",
+            "cove"
+        ],
+        "adjective": [
+            "sandy",
+            "serene",
+            "secluded",
+            "tranquil",
+            "idylic",
+            "scorching"
+        ],
+        "feature": [
+            "The soft sand stretches out before you, inviting your footsteps.",
+            "The rhythmic sound of crashing waves provides a soothing soundtrack.",
+            "Seagulls soar overhead, and the salty breeze carries the tang of the ocean.",
+            "Waves gently lap against the sandy shore.",
+            "Seagulls soar overhead, their cries filling the air.",
+            "The scent of saltwater mingles with the breeze.",
+            "Sand dunes rise and fall, creating undulating landscapes.",
+            "Shells of various shapes and sizes are scattered along the beach.",
+            "A lone palm tree sways gracefully in the coastal winds.",
+            "Footprints mark the sand, evidence of those who came before.",
+            "Sunlight dances on the surface of the sparkling blue water.",
+            "Sandpipers scurry along the water's edge, searching for food.",
+            "The distant sound of crashing waves creates a soothing rhythm."
+        ]
+    },
+
+    "sea": {
+        "location_type": [
+            "ocean"
+        ],
+        "adjective": [
+            "vast",
+            "reaching"
+        ],
+        "feature": [
+            "The sweet salty smell of the sea fills your nose."
+        ]
+    },
+
+    "mountain": {
+        "location_type": [
+            "mountain"
+        ],
+        "adjective": [
+            "imposing"
+        ],
+        "feature": [
+            "Snow glistens at the peaks of each mountain."
+        ]
+    },
+    
+    "dungeon": {
+        "location_type": [
+            "doorway",
+            "cave"
+        ],
+        "adjective": [
+            "imposing",
+            "ominious"
+        ],
+        "feature": [
+            "An ominious voice beckons you inside."
+        ]
+    },
+
+    "ruins": {
+        "location_type": [
+            "ruins"
+        ],
+        "adjective": [
+            "decrepit"
+        ],
+        "feature": [
+            "You feel the sound of rubble crunch beneath your feet."
+        ]
+    },
+
+    "building": {
+        "location_type": [
+            "cabin",
+            "shelter",
+            "lodge",
+            "cottage",
+            "hut"
+        ],
+        "adjective": [
+            "rustic",
+            "stone",
+            "cozy",
+            "secluded",
+            "quaint",
+            "charming",
+            "isolated",
+            "welcoming"
+        ],
+        "feature": [
+            "The comforting warmth of a lit fireplace beckons you inside.",
+            "Surrounded by a neatly manicured garden, complete with a picket fence.",
+            "A crackling fireplace warms the cabin, casting a cozy glow.",
+            "The scent of pine fills the air, giving a refreshing aroma.",
+            "Sunlight filters through the trees, creating dappled patterns on the cabin walls.",
+            "Surrounding the cabin are towering trees, providing a sense of seclusion.",
+            "Wildflowers bloom in vibrant colors around the cabin, adding a touch of beauty."
+        ]
+    },
+
+    "dungeon_room": {
+        "location_type": [
+            "room"
+        ],
+        "adjective": [
+            "stone"
+        ],
+        "feature": [
+            "The walls are faintly illuminated by sparse candlelight."
+        ]
+    },
+
+    "dungeon_wall": {
+        "location_type": [
+            "wall"
+        ],
+        "adjective": [
+            "looming"
+        ],
+        "feature": [
+            ""
+        ]
+    },
+
+    "preceeders": [
+        "You find yourself in",
+        "You enter",
+        "You venture into",
+        "You stumble upon",
+        "You discover",
+        "You come across",
+        "You step into",
+        "You arrive at",
+        "You wander into",
+        "You happen upon",
+        "You reach",
+        "You set foot in"
+    ],
+
+    "forenames": [
+        "Aldric",
+        "Baldwin",
+        "Cedric",
+        "Duncan",
+        "Emeric",
+        "Fulbert",
+        "Gareth",
+        "Hildebrand",
+        "Isolde",
+        "Julian",
+        "Katherine",
+        "Lancelot",
+        "Margery",
+        "Nigel",
+        "Oswald",
+        "Perceval",
+        "Quentin",
+        "Roland",
+        "Seraphina",
+        "Tristan",
+        "Ulric",
+        "Vivienne",
+        "Waldemar",
+        "Xavier",
+        "Yseult",
+        "Zephyrine",
+        "Agnes",
+        "Bartholomew",
+        "Constance",
+        "Dagobert",
+        "Eleanor"
+    ],
+    "surnames": [
+        "Ainsworth",
+        "Blackwood",
+        "Cromwell",
+        "Davenport",
+        "Everhart",
+        "Fairchild",
+        "Grimshaw",
+        "Hawthorne",
+        "Ingram",
+        "Jennings",
+        "Kingsley",
+        "Lancaster",
+        "Montgomery",
+        "Nightingale",
+        "Oakley",
+        "Pembroke",
+        "Quincy",
+        "Redmond",
+        "Stirling",
+        "Talbot",
+        "Underwood",
+        "Vane",
+        "Wellington",
+        "Xavier",
+        "York",
+        "Zimmerman",
+        "Ashbourne",
+        "Bramblewood",
+        "Clifford",
+        "Dunstan",
+        "Edgewood"
+    ]
+}
