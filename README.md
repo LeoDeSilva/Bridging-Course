@@ -1,5 +1,5 @@
 # Bridging-Course
-A quick text adventure project for A level bridging course, with implemented procedural generation via the wave function collapse algorithm, turn based combat with positioning, classes and skills and dungeon crawling elements. 
+A quick text adventure project for A level bridging course, procedural generation implemented via the wave function collapse algorithm, turn based combat with positioning, classes and skills and dungeon crawling elements. 
 
 ![CleanShot 2023-08-11 at 18 05 45@2x](https://github.com/LeoDeSilva/Bridging-Course/assets/46300158/78c5c719-c8c7-4c47-927b-06f8486bd8ea)
 ![CleanShot 2023-08-11 at 18 06 25@2x](https://github.com/LeoDeSilva/Bridging-Course/assets/46300158/2ba1c047-778d-4d09-b381-289f0fc36fc2)
